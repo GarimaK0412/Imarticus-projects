@@ -1,219 +1,213 @@
-# 🏪 Decathlon Retail Sales Performance Dashboard
+# 🏪 Decathlon Retail Sales Dashboard
 
-> An interactive Business Intelligence dashboard built entirely in **Microsoft Excel** to analyze retail sales performance for a Decathlon-style sporting goods retail chain.
-
----
-
-# 📌 Project Overview
-
-Retail organizations generate thousands of sales transactions every day. Converting this raw transactional data into meaningful business insights is essential for making informed decisions.
-
-This project demonstrates how Microsoft Excel can be used as a Business Intelligence tool to transform raw sales data into an interactive dashboard that enables management to monitor sales, profitability, customer behaviour, regional performance, and product performance.
-
-The dashboard has been designed for business users who require quick access to important KPIs without manually analyzing thousands of records.
+An interactive **Microsoft Excel Dashboard** developed to analyze the retail sales performance of a Decathlon-style sporting goods retail chain. The dashboard transforms raw sales transactions into meaningful business insights using Pivot Tables, Pivot Charts, KPI Cards, and Interactive Slicers.
 
 ---
 
-# 🎯 Business Problem
+# 📌 Table of Contents
 
-Retail managers often face questions such as:
+- [Project Overview](#-project-overview)
+- [Business Objective](#-business-objective)
+- [Project Architecture](#-project-architecture)
+- [Project Structure](#-project-structure)
+- [Dashboard Preview](#-dashboard-preview)
+- [Dataset Description](#-dataset-description)
+- [Worksheets Included](#-worksheets-included)
+- [Dashboard KPIs](#-dashboard-kpis)
+- [Dashboard Visualizations](#-dashboard-visualizations)
+- [Microsoft Excel Features Used](#-microsoft-excel-features-used)
+- [Project Workflow](#-project-workflow)
+- [Business Insights](#-business-insights)
+- [How to Use](#-how-to-use)
+- [Software Requirements](#-software-requirements)
+- [Author](#-author)
 
-- Which product categories generate the highest revenue?
-- Which stores are performing the best?
-- Which cities contribute the most sales?
-- How do monthly sales fluctuate?
-- Which brands perform better than others?
-- What payment methods are customers using?
-- Which sales representatives are top performers?
+---
 
-Instead of manually answering these questions, this dashboard provides an interactive solution.
+# 📖 Project Overview
+
+The purpose of this project is to analyze retail sales data and present business performance through an interactive Excel dashboard.
+
+The dashboard provides a quick overview of sales performance, profitability, regional contribution, product category performance, and salesperson performance using easy-to-understand visualizations.
+
+This project demonstrates how Microsoft Excel can be used as a Business Intelligence tool for data analysis and reporting.
+
+---
+
+# 🎯 Business Objective
+
+The objective of this dashboard is to help management answer business questions such as:
+
+- Which sports categories generate the highest sales?
+- Which cities contribute the most revenue?
+- Which regions perform better?
+- Which brands sell the most?
+- Who are the top-performing salespersons?
+- How do sales vary month by month?
+
+The dashboard enables faster decision-making through interactive reporting.
 
 ---
 
 # 🏗 Project Architecture
 
 ```text
-                    Raw Dataset
-                         │
-                         ▼
-                  Data Cleaning
-                         │
-                         ▼
-               Data Preparation
-                         │
-                         ▼
-                Excel Formulas
-      (IF, SUMIFS, COUNTIFS, XLOOKUP)
-                         │
-                         ▼
-                  Pivot Tables
-                         │
-                         ▼
-                  Pivot Charts
-                         │
-                         ▼
-             Interactive Dashboard
-                         │
-                         ▼
-          Business Insights & Reports
+Raw Dataset
+      │
+      ▼
+Data Cleaning & Formatting
+      │
+      ▼
+Pivot Tables
+      │
+      ▼
+Pivot Charts
+      │
+      ▼
+Interactive Dashboard
+      │
+      ▼
+Business Insights
 ```
 
 ---
 
-# 📂 Project Folder Structure
+# 📂 Project Structure
 
 ```text
 Decathlon-Retail-Sales-Dashboard
 │
 ├── Dashboard.xlsx
+├── Dataset.xlsx
 ├── README.md
 │
-├── screenshots
-│   ├── Dashboard.png
-│   ├── monthlysales.png
-│   ├── salesbybrand.png
-│   ├── salesbycity.png
-│   ├── salesbyregion.png
-│   ├── salesbysportscategory.png
-│   └── topsalesperson.png
-│
-└── Dataset.xlsx
+└── screenshots
+    ├── Dashboard.png
+    ├── monthlysales.png
+    ├── salesbybrand.png
+    ├── salesbycity.png
+    ├── salesbyregion.png
+    ├── salesbysportscategory.png
+    └── topsalesperson.png
 ```
 
 ---
 
 # 📊 Dashboard Preview
 
-## Executive Dashboard
-
 ![Dashboard](screenshots/Dashboard.png)
 
 ---
 
-# 📸 Dashboard Components
+# 📋 Dataset Description
 
-## Monthly Sales Trend
+The dataset contains simulated retail sales transactions for a Decathlon-style sporting goods retail chain.
 
-![Monthly Sales](screenshots/monthlysales.png)
+Each row represents a single customer purchase.
 
----
-
-## Sales by Brand
-
-![Sales by Brand](screenshots/salesbybrand.png)
-
----
-
-## Sales by City
-
-![Sales by City](screenshots/salesbycity.png)
-
----
-
-## Sales by Region
-
-![Sales by Region](screenshots/salesbyregion.png)
-
----
-
-## Sales by Sports Category
-
-![Sales by Sports Category](screenshots/salesbysportscategory.png)
-
----
-
-## Top Salesperson
-
-![Top Salesperson](screenshots/topsalesperson.png)
-
----
-
-# 📋 Dataset Explanation
-
-The dataset consists of simulated retail transactions from multiple Decathlon stores across different cities.
-
-Each record represents a single customer purchase.
-
-### Dataset Fields
+### Dataset Columns
 
 | Column | Description |
 |---------|-------------|
-| Order ID | Unique transaction identifier |
+| Order ID | Unique transaction ID |
 | Order Date | Date of purchase |
-| Store | Store where purchase was made |
+| Store | Store where the transaction occurred |
 | City | Store location |
 | Region | Sales region |
-| Customer ID | Unique customer |
+| Customer ID | Unique customer identifier |
 | Gender | Customer gender |
 | Age Group | Customer age category |
-| Membership Type | Customer loyalty program |
+| Membership Type | Customer membership category |
 | Sport Category | Product category |
 | Product | Product purchased |
 | Brand | Product brand |
 | Quantity | Number of units sold |
-| Unit Price | Selling price |
-| Discount | Discount applied |
+| Unit Price | Price per unit |
+| Discount % | Discount applied |
 | Sales | Total sales amount |
 | Cost | Product cost |
-| Profit | Sales − Cost |
-| Payment Method | Customer payment mode |
-| Salesperson | Employee handling sale |
-| Customer Rating | Customer feedback score |
+| Profit | Profit earned |
+| Payment Method | Mode of payment |
+| Salesperson | Sales representative |
+| Customer Rating | Customer feedback rating |
 
 ---
 
-# ⚙ Excel Features Used
+# 📑 Worksheets Included
 
-✔ Data Cleaning
-
-✔ Data Validation
-
-✔ Conditional Formatting
-
-✔ Named Ranges
-
-✔ Pivot Tables
-
-✔ Pivot Charts
-
-✔ KPI Cards
-
-✔ Slicers
-
-✔ Dashboard Design
-
-✔ Business Reporting
-
----
-
-# 🧮 Excel Functions Used
-
-- IF()
-- SUMIFS()
-- COUNTIFS()
-- XLOOKUP()
-- TEXT()
-- MONTH()
-- YEAR()
-- AVERAGE()
-- MAX()
-- MIN()
-- IFERROR()
+| Worksheet | Description |
+|------------|-------------|
+| **Data** | Raw sales transaction dataset |
+| **Data_Dictionary** | Description of all dataset columns |
+| **Pivots** | Pivot Tables used for dashboard creation |
+| **Dashboard** | Interactive dashboard with KPIs and charts |
+| **Insights** | Business observations and recommendations |
 
 ---
 
 # 📈 Dashboard KPIs
 
-The dashboard includes:
+The dashboard provides the following Key Performance Indicators (KPIs):
 
-- Total Sales
-- Total Profit
-- Total Orders
-- Average Order Value
-- Profit Margin
-- Top Performing Store
-- Top Selling Category
-- Highest Revenue Brand
+- 💰 Total Sales
+- 💵 Total Profit
+- 📊 Profit Margin
+- 🛒 Total Orders
+- 📦 Average Order Value
+- ⭐ Average Customer Rating
+
+---
+
+# 📊 Dashboard Visualizations
+
+The dashboard includes the following interactive visualizations:
+
+### Monthly Sales Trend
+
+![Monthly Sales](screenshots/monthlysales.png)
+
+---
+
+### Sales by Brand
+
+![Sales by Brand](screenshots/salesbybrand.png)
+
+---
+
+### Sales by City
+
+![Sales by City](screenshots/salesbycity.png)
+
+---
+
+### Sales by Region
+
+![Sales by Region](screenshots/salesbyregion.png)
+
+---
+
+### Sales by Sports Category
+
+![Sales by Sports Category](screenshots/salesbysportscategory.png)
+
+---
+
+### Top Salesperson
+
+![Top Salesperson](screenshots/topsalesperson.png)
+
+---
+
+# 🛠 Microsoft Excel Features Used
+
+- Data Cleaning
+- Pivot Tables
+- Pivot Charts
+- KPI Cards
+- Interactive Slicers
+- Conditional Formatting
+- Dashboard Design
+- Excel Formatting
 
 ---
 
@@ -221,147 +215,51 @@ The dashboard includes:
 
 The dashboard was developed using the following workflow:
 
-### Step 1
-
-Data Collection
-
-↓
-
-### Step 2
-
-Data Cleaning
-
-- Removed duplicates
-- Standardized text
-- Checked missing values
-- Corrected formatting
-
-↓
-
-### Step 3
-
-Data Preparation
-
-Created helper columns including:
-
-- Month
-- Year
-- Quarter
-- Profit Margin
-
-↓
-
-### Step 4
-
-Business Calculations
-
-Used Excel formulas to calculate business metrics.
-
-↓
-
-### Step 5
-
-Pivot Tables
-
-Created multiple Pivot Tables to summarize the dataset.
-
-↓
-
-### Step 6
-
-Pivot Charts
-
-Converted Pivot Tables into interactive visualizations.
-
-↓
-
-### Step 7
-
-Dashboard Design
-
-Built an executive dashboard with KPI Cards and Slicers.
-
-↓
-
-### Step 8
-
-Business Insights
-
-Generated actionable insights for management.
+1. Collected and reviewed the dataset.
+2. Cleaned and formatted the data.
+3. Organized the dataset for analysis.
+4. Created Pivot Tables for summarization.
+5. Developed Pivot Charts for visualization.
+6. Designed KPI Cards to summarize business performance.
+7. Built an interactive dashboard using slicers.
+8. Generated business insights based on dashboard findings.
 
 ---
 
-# 💡 Key Business Insights
+# 💡 Business Insights
 
-- Monthly sales trends help identify seasonal demand.
-- Running and Cycling categories contribute significantly to overall revenue.
-- Regional analysis highlights top-performing markets.
-- Brand-wise comparisons support inventory planning.
-- Customer ratings provide insight into shopping experience.
-- Interactive slicers allow quick business analysis.
-- KPI cards provide a high-level overview of business performance.
-
----
-
-# 📢 Business Recommendations
-
-- Increase inventory for top-selling categories.
-- Optimize discount strategies to improve profit margins.
-- Replicate best practices from high-performing stores.
-- Improve performance in low-performing regions.
-- Promote customer loyalty memberships.
-- Monitor customer feedback regularly.
+- Monthly sales trends help identify seasonal business performance.
+- Brand-wise analysis highlights the best-performing brands.
+- City-wise analysis identifies locations contributing the highest sales.
+- Regional comparison helps evaluate overall market performance.
+- Sports category analysis provides insights into customer demand.
+- Salesperson analysis identifies top-performing employees.
+- KPI cards provide a quick overview of overall business performance.
 
 ---
 
-# 🚀 How to Use This Project
+# 🚀 How to Use
 
-### Clone the Repository
+### Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/Decathlon-Retail-Sales-Dashboard.git
+git clone https://github.com/GarimaK0412/Decathlon-Retail-Sales-Dashboard.git
 ```
 
----
+### Open the project
 
-### Open the Project
-
-1. Navigate to the project folder.
-2. Open **Dashboard.xlsx** using Microsoft Excel (2019 or later / Microsoft 365 recommended).
-3. Enable editing if prompted.
-4. Use the Dashboard sheet to interact with KPI cards, Pivot Charts, and Slicers.
+1. Download or clone the repository.
+2. Open **Dashboard.xlsx** using Microsoft Excel.
+3. Enable Editing if prompted.
+4. Navigate to the **Dashboard** worksheet.
+5. Use the slicers to filter the dashboard interactively.
 
 ---
 
 # 💻 Software Requirements
 
 - Microsoft Excel 2019 or later
-- Microsoft 365 (Recommended)
-- Windows / macOS
-
----
-
-# 📚 Skills Demonstrated
-
-- Business Intelligence
-- Retail Analytics
-- Data Cleaning
-- Dashboard Development
-- Data Visualization
-- Pivot Tables
-- KPI Reporting
-- Interactive Reporting
-- Excel Automation Concepts
-
----
-
-# 🔮 Future Improvements
-
-- Integrate Power Query for automated data refresh.
-- Connect to SQL database for live data.
-- Build Power BI version of the dashboard.
-- Add forecasting and trend analysis.
-- Include advanced What-If Analysis.
+- Microsoft Excel 365 (Recommended)
 
 ---
 
@@ -377,4 +275,4 @@ GitHub: https://github.com/GarimaK0412
 
 ---
 
-## ⭐ If you found this project useful, consider giving it a star!
+### ⭐ If you found this project helpful, consider giving it a star.
